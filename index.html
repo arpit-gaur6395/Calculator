@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <style>
+        body {
+            margin: 0;
+            background-color: #111;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+
+        #calculator {
+            background-color: rgb(11, 8, 1);
+            min-height: 750px;
+            max-width: 500px;
+            min-width: 275px;
+            height: 500px;
+            text-align: center;
+        }
+
+        #input {
+            width: 85%;
+            min-height: 50px;
+            max-height: 100px;
+            font-size: 2rem;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 2px solid rgb(255, 166, 0);
+            background-color: #000000;
+            font-weight: bold;
+            margin-top: 80px;
+            color: aliceblue;
+            text-align: center;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        button {
+            height: 50px;
+            width: 50px;
+            background-color: rgb(27, 27, 26);
+            font-size: 19px;
+            color: white;
+            border: none;
+            border-radius: 100%;
+            border: 2px solid rgb(255, 162, 0);
+            margin-top: 20px;
+            align-items: center
+        }
+
+        button:hover {
+            background-color: yellow;
+            color: black;
+
+        }
+
+        button:focus {
+            outline: none;
+            background-color: rgb(105, 104, 100);
+            color: white;
+        }
+
+        .btn {
+            background-color: #ff8000;
+            color: #000000;
+            border: none;
+        }
+
+        #hero {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            margin-left: 50px;
+            margin-right: 10px;
+        }
+        #inp{
+            display: grid;
+            margin-left: 50px;
+            margin-right: 10px;
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="calculator">
+        <div id="inp">
+            <input type="text" name="" id="input" readonly>
+        </div>
+        <div id="hero">
+            <td><button class="btn" value="" onClick="AC()">AC</button></td>
+            <td><button class="btn" onclick="removeLast()">⌫</button></td>
+            <td><button class="btn" onClick="toggleSign() ">+/-</button></td>
+            <td><button class="btn" value="/" onClick="Div()">/</button></td>
+
+            <td><button id="n7" value="7" onClick="btn7()">7</button></td>
+            <td><button id="n8" value="8" onClick="btn8()">8</button></td>
+            <td><button id="n9" value="9" onClick="btn9()">9</button></td>
+            <td><button class="btn" id="mul" value="*" onClick="Mul()">x</button></td>
+
+            <td><button id="n4" value="4" onClick="btn4()">4</button></td>
+            <td><button id="n5" value="5" onClick="btn5()">5</button></td>
+            <td><button id="n6" value="6" onClick="btn6()">6</button></td>
+            <td><button class="btn" id="sub" value="-" onClick="Sub()">-</button></td>
+
+            <td><button id="n1" value="1" onClick="btn1()">1</button></td>
+            <td><button id="n2" value="2" onClick="btn2()">2</button></td>
+            <td><button id="n3" value="3" onClick="btn3()">3</button></td>
+            <td><button class="btn" id="add" value="+" onClick="Add()">+</button></td>
+
+            <td><button id="mod" value="%" onClick="Modulo()">%</button></td>
+            <td><button id="n0" value="0" onClick="btn0()">0</button></td>
+            <td><button id="dot" value="." onclick="DOT()">.</button></td>
+            <td><button class="btn" id="cal" value="" onclick="calculate()">=</button></td>
+        </div>
+    </div>
+</body>
+
+</html>
